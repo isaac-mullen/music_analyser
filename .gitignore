@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python bytecode/cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables / secrets (NOT the same as .venv — easy to confuse!)
+.env
+
+# OS junk
+.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Distribution/build artifacts
+build/
+dist/
+*.egg-info/
