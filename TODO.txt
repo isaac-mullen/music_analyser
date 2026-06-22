@@ -1,0 +1,5 @@
+Important Features
+- MFCCs (timbre)
+- Chroma (harmonic/key content)
+- Tempo/Beat Tracking (rythym)
+- Spectral Centroid (Brightness of the song)
