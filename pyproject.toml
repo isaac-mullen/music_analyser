@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "music-analyzer"
+version = "0.1.0"
+description = "Extract and analyze audio features from music files using librosa"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Isaac", email = "bbalias@proton.me"},
+]
+keywords = ["music", "audio", "librosa", "feature-extraction", "analysis"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+]
+
+dependencies = [
+    "librosa>=0.10",
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "scikit-learn>=1.4",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "soundfile>=0.12",
+    "sqlalchemy>=2.0",
+    "umap-learn>=0.5",
+    "faiss-cpu>=1.7",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "ipython>=8.0.0",
+]
+colab = [
+    "jupyter>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/isaac-mullen/music-analyzer"
+Repository = "https://github.com/isaac-mullen/music-analyzer.git"
+Issues = "https://github.com/isaac-mullen/music-analyzer/issues"
+
+[tool.setuptools]
+packages = ["music_engine"]
+
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pylint]
+max-line-length = 100
